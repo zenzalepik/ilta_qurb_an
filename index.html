@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QurbanKu - Jual Beli Hewan Qurban Terpercaya</title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-mosque text-emerald-600 text-2xl"></i>
+                    <span class="text-xl font-bold text-emerald-700">QurbanKu</span>
+                </div>
+                <div class="hidden md:flex space-x-6 text-gray-600 font-medium">
+                    <a href="#beranda" class="hover:text-emerald-600">Beranda</a>
+                    <a href="#tentang" class="hover:text-emerald-600">Tentang</a>
+                    <a href="#hewan" class="hover:text-emerald-600">Hewan Qurban</a>
+                    <a href="#paket" class="hover:text-emerald-600">Paket</a>
+                    <a href="#kontak" class="hover:text-emerald-600">Kontak</a>
+                </div>
+                <a href="#order" class="hidden md:block bg-emerald-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-emerald-700 transition">Pesan Sekarang</a>
+                <button id="menuBtn" class="md:hidden text-gray-600 text-2xl"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t pb-4">
+            <div class="flex flex-col space-y-2 px-4 pt-2 text-gray-600 font-medium">
+                <a href="#beranda" class="py-1">Beranda</a>
+                <a href="#tentang" class="py-1">Tentang</a>
+                <a href="#hewan" class="py-1">Hewan Qurban</a>
+                <a href="#paket" class="py-1">Paket</a>
+                <a href="#kontak" class="py-1">Kontak</a>
+                <a href="#order" class="bg-emerald-600 text-white text-center px-4 py-2 rounded-full font-semibold">Pesan Sekarang</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="beranda" class="relative bg-gradient-to-br from-emerald-50 via-white to-emerald-100 pt-24 pb-16 md:pt-36 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-10">
+            <div class="flex-1 text-center md:text-left">
+                <p class="text-emerald-600 font-semibold tracking-wide uppercase">Idul Adha 1447 H</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mt-3 leading-tight">Hewan Qurban <br><span class="text-emerald-600">Sehat & Terpercaya</span></h1>
+                <p class="text-gray-500 mt-4 text-lg max-w-xl">Dapatkan hewan qurban terbaik dengan harga terjangkau. Sapi, kambing, dan domba berkualitas tinggi, siap antar ke lokasi Anda.</p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#order" class="bg-emerald-600 text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-emerald-700 transition shadow-lg">Pesan Sekarang</a>
+                    <a href="#hewan" class="border-2 border-emerald-600 text-emerald-600 px-8 py-3 rounded-full font-semibold text-lg hover:bg-emerald-50 transition">Lihat Hewan</a>
+                </div>
+            </div>
+            <div class="flex-1">
+                <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=600&q=80" alt="Hewan Qurban" class="rounded-2xl shadow-2xl w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang -->
+    <section id="tentang" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Kenapa Memilih <span class="text-emerald-600">QurbanKu</span>?</h2>
+            <p class="text-gray-500 mt-3 max-w-2xl mx-auto">Kami berkomitmen memberikan pelayanan terbaik untuk ibadah qurban Anda.</p>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="p-6 border rounded-2xl hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl"><i class="fas fa-check-circle"></i></div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4">Hewan Sehat</h3>
+                    <p class="text-gray-500 mt-2">Setiap hewan diperiksa oleh dokter hewan profesional dan bebas dari cacat.</p>
+                </div>
+                <div class="p-6 border rounded-2xl hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl"><i class="fas fa-truck"></i></div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4">Antar ke Rumah</h3>
+                    <p class="text-gray-500 mt-2">Layanan antar gratis hingga ke lokasi Anda di seluruh wilayah Jabodetabek.</p>
+                </div>
+                <div class="p-6 border rounded-2xl hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4">Harga Terjangkau</h3>
+                    <p class="text-gray-500 mt-2">Harga bersaing dengan kualitas terbaik. Dapatkan promo early bird setiap tahunnya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hewan Qurban -->
+    <section id="hewan" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Pilihan <span class="text-emerald-600">Hewan Qurban</span></h2>
+                <p class="text-gray-500 mt-3 max-w-2xl mx-auto">Kami menyediakan berbagai jenis hewan qurban sesuai kebutuhan Anda.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <!-- Sapi -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1570042225831-d98af757d0f1?w=600&q=80" alt="Sapi" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800">Sapi</h3>
+                        <p class="text-gray-500 mt-2">Sapi limousin dan brahman sehat, bobot 250-350 kg. Siap untuk 7 orang.</p>
+                        <div class="flex items-center gap-2 mt-4 text-sm text-gray-400">
+                            <i class="fas fa-weight"></i><span>250-350 kg</span>
+                            <i class="fas fa-users ml-3"></i><span>7 Orang</span>
+                        </div>
+                        <p class="text-2xl font-bold text-emerald-600 mt-4">Rp 21.500.000</p>
+                    </div>
+                </div>
+                <!-- Kambing -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1524024973431-2ad9167460d8?w=600&q=80" alt="Kambing" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800">Kambing</h3>
+                        <p class="text-gray-500 mt-2">Kambing kacang dan jawarandu, bobot 25-35 kg. Cocok untuk 1 orang.</p>
+                        <div class="flex items-center gap-2 mt-4 text-sm text-gray-400">
+                            <i class="fas fa-weight"></i><span>25-35 kg</span>
+                            <i class="fas fa-users ml-3"></i><span>1 Orang</span>
+                        </div>
+                        <p class="text-2xl font-bold text-emerald-600 mt-4">Rp 3.200.000</p>
+                    </div>
+                </div>
+                <!-- Domba -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1483308128320-6413b7c919b1?w=600&q=80" alt="Domba" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800">Domba</h3>
+                        <p class="text-gray-500 mt-2">Domba garut dan merino, bobot 25-40 kg. Daging empuk dan berkualitas.</p>
+                        <div class="flex items-center gap-2 mt-4 text-sm text-gray-400">
+                            <i class="fas fa-weight"></i><span>25-40 kg</span>
+                            <i class="fas fa-users ml-3"></i><span>1 Orang</span>
+                        </div>
+                        <p class="text-2xl font-bold text-emerald-600 mt-4">Rp 3.500.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paket -->
+    <section id="paket" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Paket <span class="text-emerald-600">Qurban</span></h2>
+            <p class="text-gray-500 mt-3 max-w-2xl mx-auto">Pilih paket yang paling sesuai dengan budget dan kebutuhan Anda.</p>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="border-2 border-gray-200 rounded-2xl p-8 hover:border-emerald-400 transition">
+                    <h3 class="text-xl font-bold text-gray-800">Paket Silver</h3>
+                    <p class="text-4xl font-extrabold text-emerald-600 mt-4">Rp 3,2 Jt</p>
+                    <p class="text-gray-500 text-sm">/ekor</p>
+                    <ul class="mt-6 space-y-3 text-left text-gray-600">
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>1 Kambing/Domba</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Bobot 25-35 kg</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Sehat & tidak cacat</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Sertifikat qurban</li>
+                    </ul>
+                    <a href="#order" class="mt-6 block bg-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-700 transition">Pilih Paket</a>
+                </div>
+                <div class="border-2 border-emerald-500 rounded-2xl p-8 shadow-lg relative scale-105">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-sm px-4 py-1 rounded-full font-semibold">Terpopuler</span>
+                    <h3 class="text-xl font-bold text-gray-800">Paket Gold</h3>
+                    <p class="text-4xl font-extrabold text-emerald-600 mt-4">Rp 21,5 Jt</p>
+                    <p class="text-gray-500 text-sm">/ekor</p>
+                    <ul class="mt-6 space-y-3 text-left text-gray-600">
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>1 Sapi Limousin</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Bobot 250-350 kg</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Untuk 7 orang</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Antar gratis + sertifikat</li>
+                    </ul>
+                    <a href="#order" class="mt-6 block bg-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-700 transition">Pilih Paket</a>
+                </div>
+                <div class="border-2 border-gray-200 rounded-2xl p-8 hover:border-emerald-400 transition">
+                    <h3 class="text-xl font-bold text-gray-800">Paket Platinum</h3>
+                    <p class="text-4xl font-extrabold text-emerald-600 mt-4">Rp 25 Jt</p>
+                    <p class="text-gray-500 text-sm">/ekor</p>
+                    <ul class="mt-6 space-y-3 text-left text-gray-600">
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>1 Sapi Premium</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Bobot 350-450 kg</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Untuk 7 orang</li>
+                        <li><i class="fas fa-check text-emerald-500 mr-2"></i>Antar + potong + sertifikat</li>
+                    </ul>
+                    <a href="#order" class="mt-6 block bg-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-700 transition">Pilih Paket</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section class="py-16 md:py-24 bg-emerald-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Apa Kata <span class="text-emerald-600">Mereka</span>?</h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-white p-6 rounded-2xl shadow-md text-left">
+                    <div class="flex text-yellow-400 text-sm mb-3"><i class="fas fa-star"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i></div>
+                    <p class="text-gray-600">"Sapinya sehat dan besar. Pelayanan ramah, antar tepat waktu. Sangat puas!"</p>
+                    <div class="flex items-center gap-3 mt-4">
+                        <div class="w-10 h-10 bg-emerald-200 text-emerald-700 rounded-full flex items-center justify-center font-bold">AH</div>
+                        <div><p class="font-semibold text-gray-800">Ahmad H.</p><p class="text-sm text-gray-400">Jakarta Selatan</p></div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md text-left">
+                    <div class="flex text-yellow-400 text-sm mb-3"><i class="fas fa-star"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i></div>
+                    <p class="text-gray-600">"Sudah 3 tahun qurban di QurbanKu. Kambingnya gemuk-gemuk, rekomendasi banget!"</p>
+                    <div class="flex items-center gap-3 mt-4">
+                        <div class="w-10 h-10 bg-emerald-200 text-emerald-700 rounded-full flex items-center justify-center font-bold">SN</div>
+                        <div><p class="font-semibold text-gray-800">Siti N.</p><p class="text-sm text-gray-400">Depok</p></div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md text-left">
+                    <div class="flex text-yellow-400 text-sm mb-3"><i class="fas fa-star"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i></div>
+                    <p class="text-gray-600">"Harga bersaing, kualitas premium. Proses pemesanannya mudah dan cepat."</p>
+                    <div class="flex items-center gap-3 mt-4">
+                        <div class="w-10 h-10 bg-emerald-200 text-emerald-700 rounded-full flex items-center justify-center font-bold">BR</div>
+                        <div><p class="font-semibold text-gray-800">Budi R.</p><p class="text-sm text-gray-400">Bogor</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak & Order -->
+    <section id="order" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Pesan <span class="text-emerald-600">Sekarang</span></h2>
+                <p class="text-gray-500 mt-3 max-w-2xl mx-auto">Isi form di bawah ini dan tim kami akan menghubungi Anda dalam 1x24 jam.</p>
+            </div>
+            <div class="max-w-3xl mx-auto mt-10 bg-gray-50 p-8 rounded-2xl shadow-md">
+                <form>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-1">Nama Lengkap</label>
+                            <input type="text" placeholder="Masukkan nama" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-1">No. WhatsApp</label>
+                            <input type="text" placeholder="08xxxxxxxxxx" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <label class="block text-gray-700 font-medium mb-1">Alamat</label>
+                        <textarea rows="2" placeholder="Masukkan alamat lengkap" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400"></textarea>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4 mt-4">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-1">Pilihan Hewan</label>
+                            <select class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                                <option>Sapi</option>
+                                <option>Kambing</option>
+                                <option>Domba</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-1">Jumlah</label>
+                            <input type="number" min="1" value="1" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                        </div>
+                    </div>
+                    <button type="submit" class="mt-6 w-full bg-emerald-600 text-white px-6 py-3 rounded-xl font-semibold text-lg hover:bg-emerald-700 transition shadow-lg">Kirim Pesanan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-mosque text-emerald-400 text-xl"></i>
+                    <span class="text-xl font-bold">QurbanKu</span>
+                </div>
+                <p class="text-gray-400 mt-3 text-sm">Mitra terpercaya Anda untuk ibadah qurban. Hewan sehat, harga bersahabat.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Navigasi</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#beranda" class="hover:text-white">Beranda</a></li>
+                    <li><a href="#tentang" class="hover:text-white">Tentang</a></li>
+                    <li><a href="#hewan" class="hover:text-white">Hewan Qurban</a></li>
+                    <li><a href="#paket" class="hover:text-white">Paket</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Kontak</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><i class="fab fa-whatsapp mr-2"></i>0812-3456-7890</li>
+                    <li><i class="fas fa-envelope mr-2"></i>info@qurbanku.id</li>
+                    <li><i class="fas fa-map-marker-alt mr-2"></i>Jakarta, Indonesia</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Ikuti Kami</h4>
+                <div class="flex gap-3 text-2xl text-gray-400">
+                    <a href="#" class="hover:text-emerald-400"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-emerald-400"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-emerald-400"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="hover:text-emerald-400"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-sm">
+            &copy; 2026 QurbanKu. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
