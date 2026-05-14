@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPark - Sistem Parkir Manless Terintegrasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-parking text-blue-600 text-2xl"></i>
+                    <span class="text-xl font-bold text-blue-700">Auto<span class="text-gray-800">Park</span></span>
+                </div>
+                <div class="hidden md:flex space-x-6 text-gray-600 font-medium">
+                    <a href="#beranda">Beranda</a>
+                    <a href="#fitur">Fitur</a>
+                    <a href="#cara-kerja">Cara Kerja</a>
+                    <a href="#harga">Harga</a>
+                    <a href="#kontak">Kontak</a>
+                </div>
+                <a href="#demo" class="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Ajukan Demo</a>
+                <button id="menuBtn" class="md:hidden text-gray-600 text-2xl"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t pb-4">
+            <div class="flex flex-col space-y-2 px-4 pt-2 text-gray-600 font-medium">
+                <a href="#beranda">Beranda</a>
+                <a href="#fitur">Fitur</a>
+                <a href="#cara-kerja">Cara Kerja</a>
+                <a href="#harga">Harga</a>
+                <a href="#kontak">Kontak</a>
+                <a href="#demo" class="bg-blue-600 text-white text-center px-4 py-2 rounded-full font-semibold">Ajukan Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="beranda" class="relative bg-gradient-to-br from-blue-50 via-white to-indigo-100 pt-24 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-10">
+            <div class="flex-1 text-center md:text-left">
+                <p class="text-blue-600 font-semibold tracking-wide uppercase">Sistem Parkir Otomatis</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mt-3 leading-tight">Parkir <span class="text-blue-600">Tanpa Petugas</span> <br>100% Otomatis</h1>
+                <p class="text-gray-500 mt-4 text-lg max-w-xl">Solusi parkir modern berbasis AI dan IoT. Deteksi plat nomor otomatis, pembayaran digital, dan monitoring real-time — tanpa perlu petugas di lapangan.</p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#demo" class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-700 transition shadow-lg">Ajukan Demo Gratis</a>
+                    <a href="#cara-kerja" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-50 transition">Lihat Cara Kerja</a>
+                </div>
+            </div>
+            <div class="flex-1 relative">
+                <div class="bg-blue-600 rounded-3xl p-6 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1506521781262-d4582f82e79d?w=600&q=80" alt="Sistem Parkir" class="rounded-2xl">
+                    <div class="absolute -bottom-4 -left-4 bg-white px-4 py-2 rounded-xl shadow-lg flex items-center gap-2">
+                        <i class="fas fa-camera text-blue-600"></i>
+                        <span class="font-semibold text-sm">ANPR + AI</span>
+                    </div>
+                    <div class="absolute -top-4 -right-4 bg-white px-4 py-2 rounded-xl shadow-lg flex items-center gap-2">
+                        <i class="fas fa-wifi text-blue-600"></i>
+                        <span class="font-semibold text-sm">IoT Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistik -->
+    <section class="py-12 bg-blue-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+            <div>
+                <p class="text-4xl font-extrabold">50+</p>
+                <p class="text-blue-200 mt-1">Lokasi Terpasang</p>
+            </div>
+            <div>
+                <p class="text-4xl font-extrabold">98%</p>
+                <p class="text-blue-200 mt-1">Akurasi Deteksi</p>
+            </div>
+            <div>
+                <p class="text-4xl font-extrabold">2M+</p>
+                <p class="text-blue-200 mt-1">Transaksi Bulanan</p>
+            </div>
+            <div>
+                <p class="text-4xl font-extrabold">60%</p>
+                <p class="text-blue-200 mt-1">Hemat Biaya Opearsional</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitur -->
+    <section id="fitur" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Fitur <span class="text-blue-600">Unggulan</span></h2>
+            <p class="text-gray-500 mt-3 max-w-2xl mx-auto">Teknologi terkini untuk pengalaman parkir yang cepat, aman, dan tanpa hambatan.</p>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="p-6 border rounded-2xl hover:shadow-lg transition text-left">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl"><i class="fas fa-camera"></i></div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4">ANPR Otomatis</h3>
+                    <p class="text-gray-500 mt-2">Kamera AI membaca plat nomor kendaraan secara otomatis saat masuk dan keluar. Tanpa karcis, tanpa antre.</p>
+                </div>
+                <div class="p-6 border rounded-2xl hover:shadow-lg transition text-left">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl"><i class="fas fa-credit-card"></i></div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4">Pembayaran Digital</h3>
+                    <p class="text-gray-500 mt-2">Terima pembayaran via QRIS, e-wallet, kartu, dan transfer. Sistem menghitung biaya otomatis berdasarkan durasi.</p>
+                </div>
+                <div class="p-6 border rounded-2xl hover:shadow-lg transition text-left">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4">Dashboard Real-time</h3>
+                    <p class="text-gray-500 mt-2">Pantau okupansi, pendapatan, dan laporan parkir secara real-time dari mana saja via web atau aplikasi.</p>
+                </div>
+                <div class="p-6 border rounded-2xl hover:shadow-lg transition text-left">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4">Keamanan 24/7</h3>
+                    <p class="text-gray-500 mt-2">Rekam video dan plat nomor setiap kendaraan. Notifikasi otomatis jika ada kendaraan mencurigakan.</p>
+                </div>
+                <div class="p-6 border rounded-2xl hover:shadow-lg transition text-left">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl"><i class="fas fa-robot"></i></div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4">Palang Otomatis</h3>
+                    <p class="text-gray-500 mt-2">Palang gate terbuka otomatis setelah plat terdeteksi atau pembayaran berhasil. Respons cepat dalam 1 detik.</p>
+                </div>
+                <div class="p-6 border rounded-2xl hover:shadow-lg transition text-left">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl"><i class="fas fa-cloud"></i></div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4">Cloud Management</h3>
+                    <p class="text-gray-500 mt-2">Semua data tersimpan aman di cloud. Kelola banyak lokasi parkir dari satu platform terpusat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cara Kerja -->
+    <section id="cara-kerja" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Cara <span class="text-blue-600">Kerja</span></h2>
+            <p class="text-gray-500 mt-3 max-w-2xl mx-auto">Hanya 3 langkah sederhana, parkir jadi lebih cepat dan praktis.</p>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="relative">
+                    <div class="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto">1</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4">Kendaraan Masuk</h3>
+                    <p class="text-gray-500 mt-2">Kamera ANPR langsung memindai plat nomor kendaraan Anda. Palang terbuka otomatis dalam hitungan detik.</p>
+                </div>
+                <div class="relative">
+                    <div class="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto">2</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4">Parkir & Bayar</h3>
+                    <p class="text-gray-500 mt-2">Parkir dengan nyaman. Saat akan keluar, bayar via QRIS, e-wallet, atau kartu di mesin atau aplikasi.</p>
+                </div>
+                <div class="relative">
+                    <div class="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto">3</div>
+                    <h3 class="text-xl font-semibold text-gray-800 mt-4">Keluar Otomatis</h3>
+                    <p class="text-gray-500 mt-2">Setelah pembayaran terverifikasi, kamera scan plat dan palang terbuka. Keluar tanpa perlu berhenti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Harga -->
+    <section id="harga" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Paket <span class="text-blue-600">Harga</span></h2>
+            <p class="text-gray-500 mt-3 max-w-2xl mx-auto">Sistem yang terjangkau untuk berbagai skala bisnis parkir Anda.</p>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="border-2 border-gray-200 rounded-2xl p-8 hover:border-blue-400 transition">
+                    <h3 class="text-xl font-bold text-gray-800">Starter</h3>
+                    <p class="text-gray-400 text-sm mt-1">Cocok untuk 1 lokasi</p>
+                    <p class="text-4xl font-extrabold text-blue-600 mt-4">Rp 29 Jt</p>
+                    <p class="text-gray-500 text-sm">/paket + instalasi</p>
+                    <ul class="mt-6 space-y-3 text-left text-gray-600">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>1 Unit Gate Otomatis</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Kamera ANPR 1 jalur</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>1 Mesin pembayaran</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Dashboard monitoring</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Garansi 1 tahun</li>
+                    </ul>
+                    <a href="#demo" class="mt-6 block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">Pilih Paket</a>
+                </div>
+                <div class="border-2 border-blue-500 rounded-2xl p-8 shadow-lg relative scale-105">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-sm px-4 py-1 rounded-full font-semibold">Terpopuler</span>
+                    <h3 class="text-xl font-bold text-gray-800">Business</h3>
+                    <p class="text-gray-400 text-sm mt-1">Cocok untuk 2-3 lokasi</p>
+                    <p class="text-4xl font-extrabold text-blue-600 mt-4">Rp 79 Jt</p>
+                    <p class="text-gray-500 text-sm">/paket + instalasi</p>
+                    <ul class="mt-6 space-y-3 text-left text-gray-600">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>3 Unit Gate Otomatis</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Kamera ANPR 3 jalur</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>3 Mesin pembayaran</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Dashboard multi-lokasi</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Integrasi e-wallet & QRIS</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Garansi 2 tahun + support</li>
+                    </ul>
+                    <a href="#demo" class="mt-6 block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">Pilih Paket</a>
+                </div>
+                <div class="border-2 border-gray-200 rounded-2xl p-8 hover:border-blue-400 transition">
+                    <h3 class="text-xl font-bold text-gray-800">Enterprise</h3>
+                    <p class="text-gray-400 text-sm mt-1">Cocok untuk 5+ lokasi</p>
+                    <p class="text-4xl font-extrabold text-blue-600 mt-4">Custom</p>
+                    <p class="text-gray-500 text-sm">konsultasi gratis</p>
+                    <ul class="mt-6 space-y-3 text-left text-gray-600">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Unlimited gate & kamera</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>ANPR multi-jalur</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>White-label app</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>API integrasi penuh</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Dedicated support 24/7</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>SLA terjamin</li>
+                    </ul>
+                    <a href="#demo" class="mt-6 block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Testimoni <span class="text-blue-600">Pelanggan</span></h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-white p-6 rounded-2xl shadow-md text-left">
+                    <div class="flex text-yellow-400 text-sm mb-3"><i class="fas fa-star"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i></div>
+                    <p class="text-gray-600">"Sejak pakai AutoPark, biaya operasional parkir kami turun 60%. Tidak perlu lagi jaga 3 shift."</p>
+                    <div class="flex items-center gap-3 mt-4">
+                        <div class="w-10 h-10 bg-blue-200 text-blue-700 rounded-full flex items-center justify-center font-bold">HR</div>
+                        <div><p class="font-semibold text-gray-800">Hendra R.</p><p class="text-sm text-gray-400">Manajer Mal Grand City</p></div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md text-left">
+                    <div class="flex text-yellow-400 text-sm mb-3"><i class="fas fa-star"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i></div>
+                    <p class="text-gray-600">"Akurasi deteksi plat nomornya luar biasa. 98% akurat bahkan di malam hari. Recommended!"</p>
+                    <div class="flex items-center gap-3 mt-4">
+                        <div class="w-10 h-10 bg-blue-200 text-blue-700 rounded-full flex items-center justify-center font-bold">DW</div>
+                        <div><p class="font-semibold text-gray-800">Dwi W.</p><p class="text-sm text-gray-400">Direktur Parkir Nusantara</p></div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md text-left">
+                    <div class="flex text-yellow-400 text-sm mb-3"><i class="fas fa-star"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i></div>
+                    <p class="text-gray-600">"Dashboard real-time-nya sangat membantu. Saya bisa pantau 5 lokasi parkir dari HP saja."</p>
+                    <div class="flex items-center gap-3 mt-4">
+                        <div class="w-10 h-10 bg-blue-200 text-blue-700 rounded-full flex items-center justify-center font-bold">AS</div>
+                        <div><p class="font-semibold text-gray-800">Andi S.</p><p class="text-sm text-gray-400">Pengelola Parkir RS</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Demo -->
+    <section id="demo" class="py-16 md:py-24 bg-blue-600">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h2 class="text-3xl md:text-4xl font-bold">Siap Beralih ke Parkir Manless?</h2>
+            <p class="text-blue-100 mt-3 text-lg max-w-2xl mx-auto">Isi form di bawah dan tim kami akan menghubungi Anda dalam 1x24 jam untuk demo gratis.</p>
+            <div class="bg-white p-8 rounded-2xl shadow-xl mt-8 text-left max-w-2xl mx-auto">
+                <form>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-1">Nama Lengkap</label>
+                            <input type="text" placeholder="Masukkan nama" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-1">No. WhatsApp</label>
+                            <input type="text" placeholder="08xxxxxxxxxx" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <label class="block text-gray-700 font-medium mb-1">Nama Perusahaan / Lokasi</label>
+                        <input type="text" placeholder="Contoh: Parkir Mall Grand City" class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4 mt-4">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-1">Jumlah Lokasi</label>
+                            <select class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                <option>1 Lokasi</option>
+                                <option>2-3 Lokasi</option>
+                                <option>4-5 Lokasi</option>
+                                <option>5+ Lokasi</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-1">Estimasi Kapasitas</label>
+                            <select class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                <option>< 50 kendaraan</option>
+                                <option>50-200 kendaraan</option>
+                                <option>200-500 kendaraan</option>
+                                <option>500+ kendaraan</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="mt-6 w-full bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold text-lg hover:bg-blue-700 transition shadow-lg">Ajukan Demo Gratis</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-parking text-blue-400 text-xl"></i>
+                    <span class="text-xl font-bold">Auto<span class="text-gray-300">Park</span></span>
+                </div>
+                <p class="text-gray-400 mt-3 text-sm">Solusi parkir manless berbasis AI dan IoT. Efisien, aman, dan modern.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Navigasi</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#fitur">Fitur</a></li>
+                    <li><a href="#cara-kerja">Cara Kerja</a></li>
+                    <li><a href="#harga">Harga</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Kontak</h4>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><i class="fab fa-whatsapp mr-2"></i>0812-3456-7890</li>
+                    <li><i class="fas fa-envelope mr-2"></i>info@autopark.id</li>
+                    <li><i class="fas fa-map-marker-alt mr-2"></i>Jakarta, Indonesia</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-lg mb-3">Ikuti Kami</h4>
+                <div class="flex gap-3 text-2xl text-gray-400">
+                    <a href="#" class="hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-blue-400"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-sm">
+            &copy; 2026 AutoPark. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
